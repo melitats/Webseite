@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Meli</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            padding: 2rem;
+            align-items: stretch; /* Bild und Text oben und unten bündig ausrichten */
+        }
+
+        .container img {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 2rem;
+        }
+
+        .text {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertikale Zentrierung des Textes */
+        }
+
+        .text h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .arrow-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .arrow-up a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            font-size: 2rem;
+            text-decoration: none;
+            color: #333;
+            border: 2px solid #333;
+            border-radius: 50%;
+        }
+
+        .footer-banner {
+            background: #000; /* Hintergrund schwarz */
+            color: #fff; /* Schriftfarbe weiß */
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.8rem; /* Schriftgröße größer */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-impressum,
+        .footer-links,
+        .footer-rights {
+            margin: 0 10px;
+            flex: 1;
+        }
+
+        .footer-impressum {
+            text-align: left;
+        }
+
+        .footer-impressum p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            text-align: center;
+        }
+
+        .footer-rights {
+            text-align: right;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-rights a:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('instagram_icon.png') no-repeat center center;
+            background-size: cover;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 1rem; /* Padding reduziert */
+            }
+
+            .container img {
+                width: 80%; /* Bildbreite auf 80% gesetzt */
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .text {
+                width: 100%;
+            }
+
+            .footer-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-rights {
+                text-align: left;
+                margin-top: 1rem;
+                align-self: flex-start; /* Auf gleiche Höhe wie die Links */
+            }
+
+            .footer-links {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="uebermich.jpeg" alt="Meli Bild">
+        <div class="text">
+            <h1>Hey,</h1>
+            <p>ICH BIN MELI UND KOMME AUS OSNABRÜCK. KREATIVES ARBEITEN, ZEICHNEN UND MALEN WAR IMMER EIN GROSSER BESTANDTEIL VON MIR. ICH BESUCHTE KUNSTSCHULEN, MALTE IN MEINER FREIZEIT UND WUSSTE, DASS ICH BERUFLICH SO KREATIV WIE NUR MÖGLICH ARBEITEN WOLLTE.</p>
+            <p>NACH MEINEM ABSCHLUSS ALS GRAFIKDESIGNERIN WUSSTE ICH, DASS ICH MIR EINEN BERUF NUR VOR DEM BILDSCHIRM NICHT VORSTELLEN KONNTE. ICH WOLLTE KREATIV ARBEITEN, MEINE EIGENEN IDEEN EINFLIESSEN LASSEN KÖNNEN UND ETWAS MACHEN, WAS MICH WIRKLICH ERFÜLLT UND GLÜCKLICH MACHT.</p>
+            <p>ALS ICH WÄHREND DIESER ZEIT DAS TÄTOWIEREN FÜR MICH ENTDECKTE, WUSSTE ICH SCHNELL, DASS ICH ETWAS GEFUNDEN HABE, MIT DEM ICH MICH IDENTIFIZIEREN KANN. ÜBER DIE JAHRE FAND ICH FÜR MICH HERAUS, DASS ICH MINIMALISTISCHE, ABSTRAKTE UND ORNAMENTALE MOTIVE AM LIEBSTEN VERWIRKLICHE.</p>
+            <p>ICH FREUE MICH, GEMEINSAM MIT DIR DEIN TATTOO ZU KREIEREN!</p>
+            <p>MEINE ARBEITEN FINDEST DU AUF INSTAGRAM UNTER @MELI_TATS.</p>
+        </div>
+    </div>
+
+    <div class="arrow-up">
+        <a href="#">&#8593;</a>
+    </div>
+
+    <section class="footer-banner">
+        <div class="footer-content">
+            <div class="footer-impressum">
+                <h2>IMPRESSUM</h2>
+                <p>Meli Tats<br>
+                Tattoo artist<br>
+                26 Hasestraße,<br>49074 Osnabrück</p>
+                <p><a href="mailto:appts.melissa@gmail.com" style="color: #fff;">appts.melissa@vacuostudio.com</a></p>
+            </div>
+            <div class="footer-rights">
+                <a href="https://www.instagram.com/meli_tats/?hl=de" target="_blank" class="instagram-icon"></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.arrow-up a').addEventListener('click', function(event) {
+            event.preventDefault();
+            const duration = 1000; // Dauer in Millisekunden
+            const start = window.scrollY;
+            const end = 0;
+            const clock = Date.now();
+
+            function step() {
+                const elapsed = Date.now() - clock;
+                window.scroll(0, start + (end - start) * (elapsed / duration));
+
+                if (elapsed < duration) {
+                    requestAnimationFrame(step);
+                }
+            }
+
+            step();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornamente Galerie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #000;
+            background-color: #fff; /* Hintergrundfarbe auf weiß geändert */
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 2rem;
+            justify-items: center;
+        }
+
+        .gallery-item {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+        }
+
+        .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .footer-banner {
+            background: #000; 
+            color: #fff; 
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.8rem; 
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .footer-impressum,
+        .footer-links,
+        .footer-rights {
+            margin: 0 10px;
+            flex: 1;
+        }
+
+        .footer-impressum {
+            text-align: left;
+        }
+
+        .footer-impressum p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            text-align: center;
+        }
+
+        .footer-rights {
+            text-align: right;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-rights a:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('instagram_icon.png') no-repeat center center;
+            background-size: cover;
+            margin-left: 0.5rem;
+        }
+
+        .arrow-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .arrow-up a {
+            font-size: 2rem;
+            text-decoration: none;
+            color: #000;
+            border: 2px solid #000;
+            border-radius: 50%;
+            padding: 0.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .instagram-button {
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #000; /* Weißer Rahmen */
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 2rem 0;
+        }
+
+        .instagram-button:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                width: 100%;
+                height: auto;
+                padding-top: 0;
+                margin-bottom: 1rem;
+            }
+
+            .gallery-item img {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+
+            .footer-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-rights {
+                text-align: left;
+                margin-top: 1rem;
+                align-self: flex-start; 
+            }
+
+            .footer-links {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="gallery">
+        <div class="gallery-item">
+            <img src="Neuerhead.jpg" alt="Ornamente Bild 1">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC00183-3.jpg" alt="Ornamente Bild 2">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC01607.jpg" alt="Ornamente Bild 3">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC09642-2.jpg" alt="Ornamente Bild 4">
+        </div>
+        <div class="gallery-item">
+            <img src="Portfolio2.jpg" alt="Ornamente Bild 5">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC08197-3.jpg" alt="Ornamente Bild 6">
+        </div>
+        <div class="gallery-item">
+            <img src="Portfolio10.jpg" alt="Ornamente Bild 7">
+        </div>
+        <div class="gallery-item">
+            <img src="Portfolio8.jpg" alt="Ornamente Bild 8">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC08132.jpg" alt="Ornamente Bild 9">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC07573.jpg" alt="Ornamente Bild 10">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC00183-3.jpg" alt="Ornamente Bild 11">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC07530.jpg" alt="Ornamente Bild 12">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC07861.jpg" alt="Ornamente Bild 13">
+        </div>
+        <div class="gallery-item">
+            <img src="DSC08129.jpg" alt="Ornamente Bild 14">
+        </div>
+    </main>
+
+    <div class="arrow-up">
+        <a href="#">&#8593;</a>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="https://www.instagram.com/meli_tats/?hl=de" target="_blank" class="instagram-button">SEE MORE ON INSTAGRAM</a>
+    </div>
+
+    <footer class="footer-banner">
+        <div class="footer-content">
+            <div class="footer-impressum">
+                <p>Meli Tats<br>
+                Tattoo artist<br>
+                26 Hasestraße,<br>49074 Osnabrück</p>
+                <p><a href="mailto:appts.melissa@gmail.com" style="color: #fff;">appts.melissa@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/meli_tats/?hl=de" target="_blank" class="instagram-icon"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.arrow-up a').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        function scrollToTop(duration) {
+            const start = document.documentElement.scrollTop || document.body.scrollTop;
+            const startTime = performance.now();
+
+            function scroll() {
+                const now = performance.now();
+                const time = Math.min(1, (now - startTime) / duration);
+                const timeFunction = time * (2 - time);
+                document.documentElement.scrollTop = document.body.scrollTop = Math.ceil(timeFunction * (0 - start) + start);
+
+                if (document.documentElement.scrollTop !== 0) {
+                    requestAnimationFrame(scroll);
+                }
+            }
+
+            scroll();
+        }
+
+        document.querySelector('.arrow-up a').addEventListener('click', function(event) {
+            event.preventDefault();
+            scrollToTop(1000);
+        });
+    </script>
+</body>
+</html>

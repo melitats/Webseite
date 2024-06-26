@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #000;
+            background-color: #fff;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff; /* Changed background color to white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: black;
+            margin: 0;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            padding: 2rem;
+            justify-items: center;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        .portfolio-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-item h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .footer-banner {
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-impressum,
+        .footer-links,
+        .footer-rights {
+            margin: 0 10px;
+            flex: 1;
+        }
+
+        .footer-impressum {
+            text-align: left;
+        }
+
+        .footer-impressum p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            text-align: center;
+        }
+
+        .footer-rights {
+            text-align: right;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-rights a:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('instagram_icon.png') no-repeat center center;
+            background-size: cover;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-item {
+                width: 100%;
+                padding-top: 100%;
+            }
+
+            .footer-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-rights {
+                text-align: left;
+                margin-top: 1rem;
+                align-self: flex-start;
+            }
+
+            .footer-links {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay">
+            <h1>Portfolio</h1>
+        </div>
+    </header>
+
+    <main class="portfolio">
+        <a href="OrnamenteGalerie.html" class="portfolio-item">
+            <img src="Portfolio9.jpg" alt="Ornamente">
+            <h2>Ornamente</h2>
+        </a>
+        <a href="SchriftzugGalerie.html" class="portfolio-item">
+            <img src="Portfolio5.jpg" alt="Schriftzüge">
+            <h2>Schriftzüge</h2>
+        </a>
+        <a href="AbstraktGalerie.html" class="portfolio-item" style="grid-column: 1 / 2;">
+            <img src="Portfolio1.jpg" alt="Flower / Abstrakt">
+            <h2>Abstrakt</h2>
+        </a>
+    </main>
+
+    <footer class="footer-banner">
+        <div class="footer-content">
+            <div class="footer-impressum">
+                <h2>IMPRESSUM</h2>
+                <p>Meli Tats<br>
+                Tattoo artist<br>
+                Hasestraße 26<br>49074 Osnabrück</p>
+                <p><a href="mailto:appts.melissa@gmail.com" style="color: #fff;">appts.melissa@gmail.com</a></p>
+            </div>
+            <div class="footer-rights">
+                <a href="https://www.instagram.com/meli_tats/?hl=de" target="_blank" class="instagram-icon"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let userInteracted = false;
+        let scrollTimeout;
+
+        function startAutoScroll() {
+            const targetPosition = document.querySelector('.portfolio').getBoundingClientRect().top + window.pageYOffset - window.innerHeight / 4;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 2000; // Dauer in Millisekunden
+            let start = null;
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const scrollTo = Math.min(startPosition + (distance * (progress / duration)), targetPosition);
+                window.scrollTo(0, scrollTo);
+                if (progress < duration && !userInteracted) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            scrollTimeout = setTimeout(function() {
+                if (!userInteracted) {
+                    startAutoScroll();
+                }
+            }, 2000);
+
+            document.addEventListener('mousemove', function() {
+                userInteracted = true;
+                clearTimeout(scrollTimeout);
+            });
+
+            document.addEventListener('touchstart', function() {
+                userInteracted = true;
+                clearTimeout(scrollTimeout);
+            });
+
+            document.addEventListener('wheel', function() {
+                userInteracted = true;
+                clearTimeout(scrollTimeout);
+            });
+        });
+    </script>
+</body>
+</html>
